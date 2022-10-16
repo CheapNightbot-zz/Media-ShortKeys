@@ -17,12 +17,27 @@ G = Play / Pause
 P = Next Track
 J = Stop
 
-'''
 # ______________________________ #
 
-'''
 add_hotkey() function with anonymous lambda function.
 You can also add named functions.
+
+suppress=True will block the keys from being 
+sent to other programs on successful trigger.
+Try changing it to suppress=False and run script;
+when you are on Desktop screen, press Ctrl + Shift + Arrow Up
+You can see it increases the volume, but it also selects
+icons on your Desktop screen (suppress=True prevents it).
+
+NOTE: suppress=True can cause problem with
+other applications (like; Gimp, Inkscape) using ctrl or shift 
+key shortcuts. For example; ctrl + scroll wheel will zoom in
+and zoom out in Gimp, but as this script is suppressing keyevents,
+in Gimp you will found that when you do ctrl + scroll whell doesn't
+zoom in or out, but if you hold ctrl for more than 1 second and
+then use scroll wheel, you will found now it works. So, I think
+it's not that big problem (>'-'<)
+
 '''
 
 # Volume Up = Ctrl + Shift + ↑

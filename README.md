@@ -6,6 +6,7 @@
 - <B>Best example</B>; you are listening to Spotify and you can't change track or simply play/pause songs without being focused to Spotify app window without Media Keys. Spotify shortcuts like 'Ctrl + Right Arrow' doesn't work if you are not focused to Spotify (or app is in system tray).
 
 # Feature
+> Tested on Windows 10 Pro (64-bit)<br>I'm not sure about any other Operating System.
 - Basiclly it simulates *Media Keys* on keyboard (but if you want you can do anything xD).
 - Control any media playing on your device by:
     - Play / Pause: ``Ctrl + Shift + Space``
