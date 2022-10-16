@@ -33,6 +33,8 @@ pip install keyboard
 pip install pyinstaller
 ```
 
+> <B>NOTE:</B> If you don't want to install all the packages and stuff, check [releases](https://github.com/CheapNightbot/Media-ShortKeys/releases/tag/v1.0.0). Download and extract .rar file to anywhere you like (e.g. C:\Program Files) and follow from *Step 3.* below
+
 ## Run on Windows Startup ?
 If you want to be able to use it without having to run the script every time you open your PC, one solution I came up with is; we can make executable file using pyinstaller, fire the application up whenever you start your PC and let it run in the background. 🤌
 
