@@ -1,8 +1,8 @@
 # Media-ShortKeys <img src="https://cdn-icons-png.flaticon.com/512/4154/4154727.png"  width="50" height="50">
 
-<a href="https://github.com/CheapNightbot/Media-ShortKeys/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/CheapNightbot/Media-ShortKeys?style=social"></a> 
-<a href="https://github.com/CheapNightbot/Media-ShortKeys/blob/main/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/CheapNightbot/Media-ShortKeys"></a>
-<img alt="GitHub all releases" src="https://img.shields.io/github/downloads/CheapNightbot/Media-ShortKeys/total">
+[![GitHub stars](https://img.shields.io/github/stars/CheapNightbot/Media-ShortKeys?style=social)](https://github.com/CheapNightbot/Media-ShortKeys/stargazers)
+[![GitHub license](https://img.shields.io/github/license/CheapNightbot/Media-ShortKeys)](https://github.com/CheapNightbot/Media-ShortKeys/blob/main/LICENSE)
+[![Github All Releases](https://img.shields.io/github/downloads/CheapNightbot/Media-ShortKeys/total.svg)]()
 
 <B>POV</B>: Your keyboard doesn't have [Media keys](https://wiki.jriver.com/index.php/Keyboard_Media_Keys)...
 
