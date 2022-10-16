@@ -1,4 +1,4 @@
-# Media-ShortKeys
+# Media-ShortKeys <img src="https://cdn-icons-png.flaticon.com/512/4154/4154727.png"  width="50" height="50">
 <B>POV</B>: Your keyboard doesn't have [Media keys](https://wiki.jriver.com/index.php/Keyboard_Media_Keys)...
 
 ### Why you need this?
