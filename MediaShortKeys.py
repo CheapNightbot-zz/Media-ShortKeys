@@ -16,4 +16,4 @@ shortkey('ctrl + shift + space', 'G') # Play / Pause
 shortkey('ctrl + shift + right', 'P') # Next
 shortkey('ctrl + alt + space', 'J') # Stop
 
-keyboard.wait()
+# keyboard.wait()
