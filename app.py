@@ -17,6 +17,8 @@ try:
 except ImportError:
     pass
 
+# End of some copy-paste from Documantation
+
 # MainWindow subclass.
 class MainWindow(QMainWindow):
     def __init__(self):
