@@ -9,7 +9,7 @@
 > __NEVER DOWNLOAD / RUN ANY EXECUTABLE (.EXE) FILE FROM THE INTERNET IF YOU DON'T TRUST THE SOURCE!__
 >> But me have created executable if you don't wanna do it using `pyinstaller` package. You can check the source code.
 
-### Todo list ~~〒▽〒~~ ヾ(￣▽￣) Done~dana~done
+### Todo list ~~〒▽〒~~ ヾ(￣▽￣) Done-dana-done
 - [x] Create a GUI for Media-ShortKeys.
 - [x] Can set / change custom key combinations through GUI.
 - ~~[ ] Maybe add abbreviation feature through GUI.~~
