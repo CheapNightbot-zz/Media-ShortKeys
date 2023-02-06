@@ -6,8 +6,7 @@ from PySide2.QtWidgets import QApplication, QWidget, QMainWindow, QLabel, QGridL
 from PySide2.QtGui import QIcon, QKeySequence
 from PySide2 import QtWidgets, QtGui
 
-import MediaShortKeys
-from MediaShortKeys import shortkey
+from MediaShortKeys import shortkey, keyboard
 
 # Some copy-paste from Documantation, lol
 basedir = os.path.dirname(__file__)
@@ -131,43 +130,43 @@ class MainWindow(QMainWindow):
         self.volume_Up.setFixedSize(120, 50)
         self.volume_Up.setKeySequence("Ctrl+Shift+Up")
         self.volume_Up.setDisabled(self.can_update)
-        self.volume_Up.editingFinished.connect(self.volumeUpChanged)
+        # self.volume_Up.editingFinished.connect(self.volumeUpChanged)
 
         self.volume_Down = QKeySequenceEdit()
         self.volume_Down.setFixedSize(120, 50)
         self.volume_Down.setKeySequence("Ctrl+Shift+Down")
         self.volume_Down.setDisabled(self.can_update)
-        self.volume_Down.editingFinished.connect(self.volumeDownChanged)
+        # self.volume_Down.editingFinished.connect(self.volumeDownChanged)
 
         self.media_Next = QKeySequenceEdit()
         self.media_Next.setFixedSize(120, 50)
         self.media_Next.setKeySequence("Ctrl+Shift+Right")
         self.media_Next.setDisabled(self.can_update)
-        self.media_Next.editingFinished.connect(self.mediaNextChanged)
+        # self.media_Next.editingFinished.connect(self.mediaNextChanged)
 
         self.media_Previous = QKeySequenceEdit()
         self.media_Previous.setFixedSize(120, 50)
         self.media_Previous.setKeySequence("Ctrl+Shift+Left")
         self.media_Previous.setDisabled(self.can_update)
-        self.media_Previous.editingFinished.connect(self.mediaPreviousChanged)
+        # self.media_Previous.editingFinished.connect(self.mediaPreviousChanged)
 
         self.play_Pause = QKeySequenceEdit()
         self.play_Pause.setFixedSize(120, 50)
         self.play_Pause.setKeySequence("Ctrl+Shift+Space")
         self.play_Pause.setDisabled(self.can_update)
-        self.play_Pause.editingFinished.connect(self.playPauseChanged)
+        # self.play_Pause.editingFinished.connect(self.playPauseChanged)
 
         self.mute_Unmute = QKeySequenceEdit()
         self.mute_Unmute.setFixedSize(120, 50)
         self.mute_Unmute.setKeySequence("Ctrl+Shift+M")
         self.mute_Unmute.setDisabled(self.can_update)
-        self.mute_Unmute.editingFinished.connect(self.muteUnmuteChanged)
+        # self.mute_Unmute.editingFinished.connect(self.muteUnmuteChanged)
 
         self.media_Stop = QKeySequenceEdit()
         self.media_Stop.setFixedSize(120, 50)
         self.media_Stop.setKeySequence("Ctrl+Alt+Space")
         self.media_Stop.setDisabled(self.can_update)
-        self.media_Stop.editingFinished.connect(self.mediaStopChanged)
+        # self.media_Stop.editingFinished.connect(self.mediaStopChanged)
 
         # Hotkey `update` buttons.
         self.update_volumeUp = QtWidgets.QPushButton("Update")
@@ -301,6 +300,7 @@ class MainWindow(QMainWindow):
                 window.hide()
                 tray_icon.showMessage('Media-ShortKeys', 'Minimized to system tray!', QtGui.QIcon("assets\keyboard.ico"))
 
+#<--------------------------------------------------------------------------->
     # Functions for getting hotkey changes.
     def volumeUpChanged(self):
         '''
@@ -316,8 +316,7 @@ class MainWindow(QMainWindow):
         '''
         self.volumeUpChange = self.volume_Up.keySequence().toString()
         shortkey(self.volumeUpChange, 'B')
-        # print(self.volumeUpChange)
-    
+
     def volumeDownChanged(self):
         '''
         - Function for getting hotkey changes.
@@ -332,7 +331,6 @@ class MainWindow(QMainWindow):
         '''
         self.volumeDownChange = self.volume_Down.keySequence().toString()
         shortkey(self.volumeDownChange, 'C')
-        # print(self.volumeDownChange)
     
     def mediaNextChanged(self):
         '''
@@ -346,9 +344,8 @@ class MainWindow(QMainWindow):
         by putting the new combinations from `volumeUpChange` 
         into `shortkey()` function.
         '''
-        self.mediaNextChange = self.volume_Up.keySequence().toString()
+        self.mediaNextChange = self.media_Next.keySequence().toString()
         shortkey(self.mediaNextChange, 'P')
-        # print(self.mediaNextChange)
 
     def mediaPreviousChanged(self):
         '''
@@ -362,9 +359,8 @@ class MainWindow(QMainWindow):
         by putting the new combinations from `volumeUpChange` 
         into `shortkey()` function.
         '''
-        self.mediaPreviousChange = self.volume_Up.keySequence().toString()
+        self.mediaPreviousChange = self.media_Previous.keySequence().toString()
         shortkey(self.mediaPreviousChange, 'Q')
-        # print(self.mediaPreviousChange)
 
     def playPauseChanged(self):
         '''
@@ -378,9 +374,8 @@ class MainWindow(QMainWindow):
         by putting the new combinations from `volumeUpChange` 
         into `shortkey()` function.
         '''
-        self.playPauseChange = self.volume_Up.keySequence().toString()
+        self.playPauseChange = self.play_Pause.keySequence().toString()
         shortkey(self.playPauseChange, 'G')
-        # print(self.playPauseChange)
 
     def muteUnmuteChanged(self):
         '''
@@ -394,9 +389,8 @@ class MainWindow(QMainWindow):
         by putting the new combinations from `volumeUpChange` 
         into `shortkey()` function.
         '''
-        self.muteUnmuteChange = self.volume_Up.keySequence().toString()
+        self.muteUnmuteChange = self.mute_Unmute.keySequence().toString()
         shortkey(self.muteUnmuteChange, 'D')
-        # print(self.muteUnmuteChange)
 
     def mediaStopChanged(self):
         '''
@@ -410,11 +404,10 @@ class MainWindow(QMainWindow):
         by putting the new combinations from `volumeUpChange` 
         into `shortkey()` function.
         '''
-        self.mediaStopChange = self.volume_Up.keySequence().toString()
+        self.mediaStopChange = self.media_Stop.keySequence().toString()
         shortkey(self.mediaStopChange, 'J')
-        # print(self.mediaStopChange)
-
-
+#<--------------------------------------------------------------------------->
+#<--------------------------------------------------------------------------->
     # `Update` & `Save` functions to change 
     # the value for `self.can_update`.
     # Also calling the `save_shortcuts()` function
@@ -427,7 +420,7 @@ class MainWindow(QMainWindow):
         button next to "Volume Up".\n\n
         Function for checking if the value of `can_update`
         is "True" or "False"; then changing the button text
-        according it, setting the value of `can_upate` to
+        according it, setting the value of `can_update` to
         opposite and updating `.setDisabled(can_update)` with
         updated `can_update`'s value.
         '''
@@ -435,10 +428,18 @@ class MainWindow(QMainWindow):
             self.update_volumeUp.setText("Save")
             self.can_update = False
             self.volume_Up.setDisabled(self.can_update)
+            self.volume_Up.setFocus()
+            self.volumeUpChange = self.volume_Up.keySequence().toString()
+            # Removing the old hotkey combination from `shortkey`
+            # function, otherwise both key combinations will do
+            # the same thing until we restart the application.
+            keyboard.remove_hotkey(self.volumeUpChange)
         else:
             self.update_volumeUp.setText("Update")
             self.can_update = True
             self.volume_Up.setDisabled(self.can_update)
+            self.volumeUpChange = self.volume_Up.keySequence().toString()
+            shortkey(self.volumeUpChange, 'B')
             self.save_shortcuts()
 
     def updateDownClicked(self):
@@ -456,10 +457,18 @@ class MainWindow(QMainWindow):
             self.update_volumeDown.setText("Save")
             self.can_update = False
             self.volume_Down.setDisabled(self.can_update)
+            self.volume_Down.setFocus()
+            self.volumeDownChange = self.volume_Down.keySequence().toString()
+            # Removing the old hotkey combination from `shortkey`
+            # function, otherwise both key combinations will do
+            # the same thing until we restart the application.
+            keyboard.remove_hotkey(self.volumeDownChange)
         else:
             self.update_volumeDown.setText("Update")
             self.can_update = True
             self.volume_Down.setDisabled(self.can_update)
+            self.volumeDownChange = self.volume_Down.keySequence().toString()
+            shortkey(self.volumeDownChange, 'C')
             self.save_shortcuts()
 
     def updateNextClicked(self):
@@ -477,10 +486,18 @@ class MainWindow(QMainWindow):
             self.update_mediaNext.setText("Save")
             self.can_update = False
             self.media_Next.setDisabled(self.can_update)
+            self.media_Next.setFocus()
+            self.mediaNextChange = self.media_Next.keySequence().toString()
+            # Removing the old hotkey combination from `shortkey`
+            # function, otherwise both key combinations will do
+            # the same thing until we restart the application.
+            keyboard.remove_hotkey(self.mediaNextChange)
         else:
             self.update_mediaNext.setText("Update")
             self.can_update = True
             self.media_Next.setDisabled(self.can_update)
+            self.mediaNextChange = self.media_Next.keySequence().toString()
+            shortkey(self.mediaNextChange, 'P')
             self.save_shortcuts()
 
     def updatePreviousClicked(self):
@@ -498,10 +515,18 @@ class MainWindow(QMainWindow):
             self.update_mediaPrevious.setText("Save")
             self.can_update = False
             self.media_Previous.setDisabled(self.can_update)
+            self.media_Previous.setFocus()
+            self.mediaPreviousChange = self.media_Previous.keySequence().toString()
+            # Removing the old hotkey combination from `shortkey`
+            # function, otherwise both key combinations will do
+            # the same thing until we restart the application.
+            keyboard.remove_hotkey(self.mediaPreviousChange)
         else:
             self.update_mediaPrevious.setText("Update")
             self.can_update = True
             self.media_Previous.setDisabled(self.can_update)
+            self.mediaPreviousChange = self.media_Previous.keySequence().toString()
+            shortkey(self.mediaPreviousChange, 'Q')
             self.save_shortcuts()
 
     def updatePlayPauseClicked(self):
@@ -519,10 +544,18 @@ class MainWindow(QMainWindow):
             self.update_playPause.setText("Save")
             self.can_update = False
             self.play_Pause.setDisabled(self.can_update)
+            self.play_Pause.setFocus()
+            self.playPauseChange = self.play_Pause.keySequence().toString()
+            # Removing the old hotkey combination from `shortkey`
+            # function, otherwise both key combinations will do
+            # the same thing until we restart the application.
+            keyboard.remove_hotkey(self.playPauseChange)
         else:
             self.update_playPause.setText("Update")
             self.can_update = True
             self.play_Pause.setDisabled(self.can_update)
+            self.playPauseChange = self.play_Pause.keySequence().toString()
+            shortkey(self.playPauseChange, 'G')
             self.save_shortcuts()
 
     def updateMuteUnmuteClicked(self):
@@ -540,10 +573,18 @@ class MainWindow(QMainWindow):
             self.update_muteUnmute.setText("Save")
             self.can_update = False
             self.mute_Unmute.setDisabled(self.can_update)
+            self.mute_Unmute.setFocus()
+            self.muteUnmuteChange = self.mute_Unmute.keySequence().toString()
+            # Removing the old hotkey combination from `shortkey`
+            # function, otherwise both key combinations will do
+            # the same thing until we restart the application.
+            keyboard.remove_hotkey(self.muteUnmuteChange)
         else:
             self.update_muteUnmute.setText("Update")
             self.can_update = True
             self.mute_Unmute.setDisabled(self.can_update)
+            self.muteUnmuteChange = self.mute_Unmute.keySequence().toString()
+            shortkey(self.muteUnmuteChange, 'D')
             self.save_shortcuts()
 
     def updateStopClicked(self):
@@ -561,13 +602,21 @@ class MainWindow(QMainWindow):
             self.update_mediaStop.setText("Save")
             self.can_update = False
             self.media_Stop.setDisabled(self.can_update)
+            self.media_Stop.setFocus()
+            self.mediaStopChange = self.media_Stop.keySequence().toString()
+            # Removing the old hotkey combination from `shortkey`
+            # function, otherwise both key combinations will do
+            # the same thing until we restart the application.
+            keyboard.remove_hotkey(self.mediaStopChange)
         else:
             self.update_mediaStop.setText("Update")
             self.can_update = True
             self.media_Stop.setDisabled(self.can_update)
+            self.mediaStopChange = self.media_Stop.keySequence().toString()
+            shortkey(self.mediaStopChange, 'J')
             self.save_shortcuts()
-
-
+#<--------------------------------------------------------------------------->
+#<--------------------------------------------------------------------------->
     # `Default` functions to change hotkey to default
     # also calling `save_shortcuts()` function here for
     # changing the value of hotkeys in "shortcuts.json"
@@ -579,7 +628,12 @@ class MainWindow(QMainWindow):
         Just calling the `setKeySequence()` method on `QKeySequenceEdit()`
         and setting it's value to given KeySequence/Hotkey combination
         '''
+        self.volumeUpChange = self.volume_Up.keySequence().toString()
+        keyboard.remove_hotkey(self.volumeUpChange)
+
         self.volume_Up.setKeySequence("Ctrl+Shift+Up")
+        self.volumeUpChange = self.volume_Up.keySequence().toString()
+        shortkey(self.volumeUpChange, 'B')
         self.save_shortcuts()
 
     def defaultDownClicked(self):
@@ -641,7 +695,8 @@ class MainWindow(QMainWindow):
         '''
         self.media_Stop.setKeySequence("Ctrl+Alt+Space")
         self.save_shortcuts()
-
+#<--------------------------------------------------------------------------->
+#<--------------------------------------------------------------------------->
     # Function for saving hotkey values so that
     # it doesn't change after application restarts.
     def save_shortcuts(self):
@@ -674,13 +729,15 @@ class MainWindow(QMainWindow):
 
         except FileNotFoundError:
             pass
-
+#<--------------------------------------------------------------------------->
+#<--------------------------------------------------------------------------->
     # Overriding the the close event function to make sure
     # it saves any changes to the hotkey values to "shorcuts.json"
     # file by calling `save_shortcuts()` function here.
     def closeEvent(self, event):
         self.save_shortcuts()
         super().closeEvent(event)
+
 
 # SystemTrayIcon subclass.
 class SystemTrayIcon(QtWidgets.QSystemTrayIcon):
@@ -722,6 +779,15 @@ if __name__ == '__main__':
     # otherwise it will be hidden/invisible.
     window = MainWindow()
     window.load_shortcuts()
+
+    window.volumeUpChanged()
+    window.volumeDownChanged()
+    window.mediaNextChanged()
+    window.mediaPreviousChanged()
+    window.playPauseChanged()
+    window.muteUnmuteChanged()
+    window.mediaStopChanged()
+    
     window.show()
 
     tray_icon = SystemTrayIcon(QtGui.QIcon("assets\keyboard.ico"), window)
