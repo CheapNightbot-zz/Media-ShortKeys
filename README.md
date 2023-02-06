@@ -12,7 +12,7 @@
 ### Todo list ~~〒▽〒~~ ヾ(￣▽￣) Done-dana-done
 - [x] Create a GUI for Media-ShortKeys.
 - [x] Can set / change custom key combinations through GUI.
-- ~~[ ] Maybe add abbreviation feature through GUI.~~
+- [ ] ~~Maybe add abbreviation feature through GUI.~~
 - [x] Update [Releases](https://github.com/CheapNightbot/Media-ShortKeys/releases) to the latest v2.0.1
 
 ### Why you need this?
