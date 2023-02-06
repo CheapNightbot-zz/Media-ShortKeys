@@ -43,6 +43,7 @@
 Make sure to install following packages (`pyinstaller` is optional. Only install it if you are going to make executable):
 
 [![keyboard](https://img.shields.io/badge/keyboard-v0.13.5-blue)](https://pypi.org/project/keyboard/)
+[![PySide2](https://img.shields.io/badge/PySide2-5.15.2.1-blue)](https://pypi.org/project/PySide2/)
 [![pyinstaller](https://img.shields.io/badge/pyinstaller-v5.7-blue)](https://pypi.org/project/pyinstaller/)
     
 # Make executable using `pyinstaller`
