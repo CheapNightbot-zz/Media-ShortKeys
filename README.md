@@ -33,7 +33,7 @@
     - Previous: ``Ctrl + Shift + Left Arrow``
     - Stop: ``Ctrl + Alt + Space``
 
-- You can add any key combinations you like.
+- You can add any key combinations you like. "Default" button to set key combination(s) to default.
 
 - It can be minimized to the system tray and when focused to the GUI, you can press `Ctrl+Q` to close the application.
 
