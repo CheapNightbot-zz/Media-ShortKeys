@@ -6,6 +6,8 @@
 
 <B>POV</B>: Your keyboard doesn't have [Media keys](https://wiki.jriver.com/index.php/Keyboard_Media_Keys)...
 
+__Soon I will be migrating this whole code (application) to native `C++` code (application); basically rewrite it using `C++`. I don't know if it's worth or useful anymore, but I wanna do it.__
+
 > __NEVER DOWNLOAD / RUN ANY EXECUTABLE (.EXE) FILE FROM THE INTERNET IF YOU DON'T TRUST THE SOURCE!__
 >> But me have created executable if you don't wanna do it using `pyinstaller` package. You can check the source code.
 
