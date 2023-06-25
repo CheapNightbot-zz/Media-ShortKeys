@@ -11,6 +11,8 @@ __Soon I will be migrating this whole code (application) to native `C++` code (a
 > __NEVER DOWNLOAD / RUN ANY EXECUTABLE (.EXE) FILE FROM THE INTERNET IF YOU DON'T TRUST THE SOURCE!__
 >> But me have created executable if you don't wanna do it using `pyinstaller` package. You can check the source code.
 
+> ### Hi, since I'm not maintaining the python (version) code for this and I don't think anyone will need this or even try to download from Releases; STILL today I ran the [latest release v2.0.1](https://github.com/CheapNightbot/Media-ShortKeys/releases/tag/v2.0.1) through [VirusTotal](https://virustotal.com) to make sure the outdated/un-maintained executable is safe and it's shocking that ONLY __MaxSecure__ flagged it as `Trojan.Malware.300983.susgen` and I'm sure it's false, but still you should check this [Report](https://www.virustotal.com/gui/file/91565b3bc2ce3767c54dd0a7032217a992e8e2ce41a6d2e9ae70957d38031613?nocache=1) before downloading the .zip file from [Releases](https://github.com/CheapNightbot/Media-ShortKeys/releases).
+
 ### Todo list ~~〒▽〒~~ ヾ(￣▽￣) Done-dana-done
 - [x] Create a GUI for Media-ShortKeys.
 - [x] Can set / change custom key combinations through GUI.
